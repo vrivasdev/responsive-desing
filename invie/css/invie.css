@@ -107,6 +107,7 @@ input:focus, textarea:focus{
 }
 
 .background{
+	background-color: #466173;
 	background-image: url('../images/background.png');
 	background-size: cover;
 }
@@ -490,4 +491,27 @@ input:focus, textarea:focus{
 		font-size: 30px;
 	}
 	/*fin guitarra*/
+}
+
+video {
+	width: 100%;
+}
+.video-responsive-contenedor {
+	position   : relative;
+	padding-top: 56.25%;
+}
+.video-responsive-src {
+	position: absolute;
+	left    : 0;
+	right   : 0;
+	top     : 0;
+	bottom  : 0;
+	width   : 100%;
+	height  : 100%;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+	.background {
+		background-image: ('../images/background2x.png');
+	}
 }

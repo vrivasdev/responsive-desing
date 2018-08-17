@@ -105,10 +105,25 @@
 			</div>
 		</footer>
 		<script>
-			var $burguerButton = document.getElementById('burguer-button');
-			var $menu = document.getElementById('menu');
 
-			$burguerButton.addEventListener('touchstart', toogleMenu);
+			var consulta       = window.matchMedia('(max-width: 500px)');
+			var $menu          = document.getElementById('menu');
+			var $burguerButton = document.getElementById('burguer-button');
+
+			mediaQuery(); // activa mediaQuery y eventos al momento de cargar la página
+
+			consulta.addListener(mediaQuery); //activa mediaQuery y eventos al momento de hacer "resize" al navegador
+
+			function mediaQuery() {											
+				if (consulta.matches) {
+					console.log('se cumplió la condición');
+					$burguerButton.addEventListener('touchstart', toogleMenu);
+
+				}else{
+					console.log('no se cumplió la condición');
+					$burguerButton.removeEventListener('touchstart', toogleMenu);
+				}
+			}
 
 			function toogleMenu(){
 				$menu.classList.toggle('active');

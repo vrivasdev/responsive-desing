@@ -136,6 +136,14 @@
 				$menu.classList.toggle('active');
 			}
 
+			function showMenu(){
+				$menu.classList.add('active');
+			}
+
+			function hideMenu(){
+				$menu.classList.remove('active');
+			}
+
 			var bLazy = new Blazy({
 				selector: 'img'
 			});
@@ -144,13 +152,8 @@
 
 			var gestos = new Hammer($body);
 
-			gestos.on('swipeleft', function(ev) {
-				console.log(ev);
-			});
-
-			gestos.on('swiperight', function(ev) {
-				console.log(ev);
-			});
+			gestos.on('swipeleft', hideMenu);
+			gestos.on('swiperight', showMenu);
 
 
 		</script>

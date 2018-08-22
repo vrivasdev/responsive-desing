@@ -317,18 +317,19 @@ input:focus, textarea:focus{
 }
 
 .burguer-button {
-	width: 40px;
+	width        : 40px;
 	border-radius: 50%;
-	line-height: 40px;
-	height: 40px;
-	background: #395667;
-	display: inline-block;
-	text-align: center;
-	cursor: pointer;
-	position: absolute;
-	left: 20px;
-	top: 20px;
-	z-index: 3;
+	line-height  : 40px;
+	height       : 40px;
+	background   : #395667;
+	display      : inline-block;
+	text-align   : center;
+	cursor       : pointer;
+	position     : absolute;
+	left         : 20px;
+	top          : 20px;
+	z-index      : 3;
+	color        : white;
 }
 
 @media screen and (max-width: 800px) {
@@ -339,6 +340,15 @@ input:focus, textarea:focus{
 		width: auto;
 		max-width: 800px;
 	}*/
+	/*precios*/
+	.tabla {
+		margin: 50px 20px;
+	}
+	.tabla .contenedor {
+		overflow: auto;
+		border: 1px solid #273b47;
+	}
+	/*precios*/
 	/* inicio portada */
 	.titulo{
 		font-size: 45px;
@@ -439,6 +449,12 @@ input:focus, textarea:focus{
 @media screen and (max-width: 500px) {
 	/*portada*/
 	.portada .contenedor {
+		position: static;
+	}
+	.header .contenedor {
+		position: static;
+	}
+	.header {
 		position: static;
 	}
 	.menu {		

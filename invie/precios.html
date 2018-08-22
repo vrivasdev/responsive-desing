@@ -3,6 +3,7 @@
 	<head>
 		<title>Precios de tus mejores guitarras!!</title>
 		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta" rel="stylesheet">		
 		<link rel="stylesheet" type="text/css" href="css/invie.css">
 	</head>
@@ -11,8 +12,9 @@
 			<div class="contenedor">
 				<figure class="logotipo"><!-- logotipo -->
 					<img src="images/invie.png" width="186" height="60" alt="Invie logotipo">
-				</figure>			
-				<nav class="menu"><!--menu-->
+				</figure>		
+				<span class="burguer-button icon-menu" id="burguer-button"></span>	
+				<nav class="menu" id="menu"><!--menu-->
 					<ul>
 						<li>
 							<a href="index.html">Home</a>
@@ -35,6 +37,9 @@
 								<th>Modelo</th>
 								<th>Precio</th>
 								<th>Descripción</th>
+								<th>Modelo</th>
+								<th>Precio</th>
+								<th>Descripción</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -42,13 +47,22 @@
 								<td>Invie classic</td>
 								<td>$10000</td>
 								<td>Una guitarra pro</td>
-							</tr>
-							<tr>
 								<td>Invie classic</td>
 								<td>$10000</td>
 								<td>Una guitarra pro</td>
 							</tr>
 							<tr>
+								<td>Invie classic</td>
+								<td>$10000</td>
+								<td>Una guitarra pro</td>
+								<td>Invie classic</td>
+								<td>$10000</td>
+								<td>Una guitarra pro</td>
+							</tr>
+							<tr>
+								<td>Invie classic</td>
+								<td>$10000</td>
+								<td>Una guitarra pro</td>
 								<td>Invie classic</td>
 								<td>$10000</td>
 								<td>Una guitarra pro</td>
@@ -101,5 +115,36 @@
 				</div>				
 			</div>
 		</footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
+		<script>
+
+			var consulta       = window.matchMedia('(max-width: 500px)');
+			var $menu          = document.getElementById('menu');
+			var $burguerButton = document.getElementById('burguer-button');
+
+			mediaQuery(); // activa mediaQuery y eventos al momento de cargar la página
+
+			consulta.addListener(mediaQuery); //activa mediaQuery y eventos al momento de hacer "resize" al navegador
+
+			function mediaQuery() {											
+				if (consulta.matches) {
+					console.log('se cumplió la condición');
+					$burguerButton.addEventListener('touchstart', toogleMenu);
+
+				}else{
+					console.log('no se cumplió la condición');
+					$burguerButton.removeEventListener('touchstart', toogleMenu);
+				}
+			}
+
+			function toogleMenu(){
+				$menu.classList.toggle('active');
+			}
+
+			var bLazy = new Blazy({
+				selector: 'img'
+			});
+
+		</script>
 	</body>
 </html>

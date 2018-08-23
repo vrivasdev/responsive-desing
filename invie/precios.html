@@ -127,12 +127,10 @@
 			consulta.addListener(mediaQuery); //activa mediaQuery y eventos al momento de hacer "resize" al navegador
 
 			function mediaQuery() {											
-				if (consulta.matches) {
-					console.log('se cumplió la condición');
+				if (consulta.matches) {					
 					$burguerButton.addEventListener('touchstart', toogleMenu);
 
-				}else{
-					console.log('no se cumplió la condición');
+				}else{					
 					$burguerButton.removeEventListener('touchstart', toogleMenu);
 				}
 			}

@@ -330,6 +330,19 @@ input:focus, textarea:focus{
 	top          : 20px;
 	z-index      : 3;
 	color        : white;
+	display: none;
+}
+
+.video-demo {
+	max-width: 500px;
+	width: 100%;	
+	border: 5px solid #3c5b6e;
+}
+
+.video-demo-contenedor {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 80px;
 }
 
 @media screen and (max-width: 800px) {
@@ -366,6 +379,9 @@ input:focus, textarea:focus{
 	}
 	/* fin portada */
 	/* inicio guitarras*/
+	.video-demo-contenedor {
+		margin-bottom: 0;
+	}
 	.guitarras{		
 		text-align: center;
 	}
@@ -444,10 +460,18 @@ input:focus, textarea:focus{
 	.menu ul {
 		padding: 0;
 	}
+	/*guitarras*/
+	/*.video-demo {
+		margin: 0 10px;
+	}*/
+	/*guitarras*/
 }
 
 @media screen and (max-width: 500px) {
 	/*portada*/
+	.burguer-button {
+		display: block;
+	}
 	.portada .contenedor {
 		position: static;
 	}
@@ -505,6 +529,9 @@ input:focus, textarea:focus{
 	}
 	.title-b{
 		font-size: 30px;
+	}
+	.video-demo-contenedor {
+		margin: 0 10px 30px 10px;
 	}
 	/*fin guitarra*/
 }

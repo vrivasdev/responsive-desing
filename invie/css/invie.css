@@ -325,12 +325,12 @@ input:focus, textarea:focus{
 	display      : inline-block;
 	text-align   : center;
 	cursor       : pointer;
-	position     : absolute;
+	position     : fixed;
 	left         : 20px;
 	top          : 20px;
 	z-index      : 3;
 	color        : white;
-	display: none;
+	display      : none;
 }
 
 .video-demo {
@@ -469,6 +469,12 @@ input:focus, textarea:focus{
 
 @media screen and (max-width: 500px) {
 	/*portada*/
+	.portada .button {
+		display: block;
+	}
+	.precios .header .logotipo {
+		margin: 50px 0;
+	}
 	.burguer-button {
 		display: block;
 	}
@@ -534,6 +540,11 @@ input:focus, textarea:focus{
 		margin: 0 10px 30px 10px;
 	}
 	/*fin guitarra*/
+	/*footer*/
+	.col2 {
+		align-items: stretch;
+	}
+	/*footer*/
 }
 
 video {

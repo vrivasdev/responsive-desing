@@ -1,0 +1,99 @@
+.contenedor {
+	max-width: 1000px;
+	margin   : 0 auto;
+}
+
+header {
+	display        : flex;
+	justify-content: space-between;
+	background     : #273b47;
+	color          : white;
+	align-items    : center;
+	position       : relative;
+}
+
+header > * ,
+.portada > *
+{
+	border: 1px solid red;
+}
+
+.portada {
+	display: flex;
+}
+
+.col1 {
+	width   : 70%;
+	position: relative;
+	top     : 0;
+	transition: .5s;
+}
+
+.col2 {
+	width   : 30%;
+	position: relative;
+	top     : 0; /*para poder usar top, bottom, left y right es necesario utilizar una posición relativa */
+	transition: .5s;
+}
+
+.logo {
+	width: 40%;
+}
+
+.menu, .banner {
+	width: 30%;
+}
+
+.menu {
+	position  : absolute;
+	/*left    : 0;*/	
+	left      : 70%;
+	height    : 50px;
+	background: purple;
+	transition: .5s;
+	top       : 0;
+}
+
+.banner {
+	background: lightgray;
+	color     : black;
+	transition: .5s; /*debe existir un estado inicial: top, left*/
+	position  : absolute;
+	left      : -30%;
+	top       : 0;
+	height    : 50px;
+}
+
+ @media screen and (max-width: 768px) {
+ 	.banner { 		
+ 		left: 0;
+ 		top: 50px; 		
+ 	}
+
+ 	.col2 {
+ 		top: 50px;
+ 	}
+ }
+
+ @media screen and (max-width: 600px) {
+ 	.menu {
+ 		left: 0;
+ 		top: 50px;
+ 		width: 70%;
+ 	}
+ 	.col1 {
+ 		top: 50px;
+ 	}
+ }
+
+ @media screen and (max-width: 480px) { 
+ 	.col1 {
+ 		top: 100px;
+ 	}
+ 	/*.banner {
+ 		top: 100px;
+ 		left: 0;
+ 		left: -30%;
+ 		width: 70%;
+ 	}*/
+ }

@@ -67,10 +67,18 @@ header > * ,
 	height    : 50px;
 }
 
+img {
+	transition: 1s;
+}
+
  @media screen and (max-width: 768px) {
  	.banner { 		
  		left: 70%;
  		top: 50px; 		
+ 	}
+
+ 	img {
+ 		transform: rotate(360deg);
  	}
 
  	.col2 {

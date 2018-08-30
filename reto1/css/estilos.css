@@ -111,10 +111,10 @@ header > * ,
  		display: block;
  	}
  	.col1 { 		
- 		width: auto;
+ 		width: 100%;
  	}
  	.col2{
- 		width: auto;
+ 		width: 100%;
  		top: 0;
  	}
  }
